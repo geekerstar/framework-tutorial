@@ -17,6 +17,7 @@
         <module>framework-tutorial-poi</module>
         <module>framework-tutorial-rabbitmq</module>
         <module>framework-tutorial-elasticjob-spring</module>
+        <module>framework-tutorial-spring-annotation</module>
     </modules>
 
 

@@ -20,6 +20,7 @@
         <module>framework-tutorial-spring-annotation</module>
         <module>framework-tutorial-ssm</module>
         <module>framework-tutorial-springmvc-annotation</module>
+        <module>framework-tutorial-springboot</module>
     </modules>
 
 

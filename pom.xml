@@ -15,6 +15,7 @@
         <module>framework-tutorial-flowable</module>
         <module>framework-tutorial-netty</module>
         <module>framework-tutorial-poi</module>
+        <module>framework-tutorial-rabbitmq</module>
     </modules>
 
 

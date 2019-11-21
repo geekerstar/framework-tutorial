@@ -19,6 +19,7 @@
         <module>framework-tutorial-elasticjob-spring</module>
         <module>framework-tutorial-spring-annotation</module>
         <module>framework-tutorial-ssm</module>
+        <module>framework-tutorial-springmvc-annotation</module>
     </modules>
 
 

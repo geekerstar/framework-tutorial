@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/contex http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<!--    数据源配置-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/activiti" />
+        <property name="username" value="root" />
+        <property name="password" value="210819" />
+        <property name="maxActive" value="3" />
+        <property name="maxIdle" value="1" />
+    </bean>
+
+<!--    activiti单独运行的ProcessEngine配置-->
+    <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="databaseSchemaUpdate" value="true"/>
+    </bean>
+
+    <!--<bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/itcast0711activiti"/>
+        <property name="jdbcUsername" value="root"/>
+        <property name="jdbcPassword" value="root"/>
+        <property name="databaseSchemaUpdate" value="true"/>
+    </bean>-->
+</beans>

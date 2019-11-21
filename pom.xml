@@ -14,6 +14,7 @@
         <module>framework-tutorial-elasticjob</module>
         <module>framework-tutorial-flowable</module>
         <module>framework-tutorial-netty</module>
+        <module>framework-tutorial-poi</module>
     </modules>
 
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:reg="http://www.dangdang.com/schema/ddframe/reg"
+       xmlns:job="http://www.dangdang.com/schema/ddframe/job"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.dangdang.com/schema/ddframe/reg
+            http://www.dangdang.com/schema/ddframe/reg/reg.xsd
+            http://www.dangdang.com/schema/ddframe/job
+            http://www.dangdang.com/schema/ddframe/job/job.xsd
+">
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/dataflow?serverTimezone=Asia/Shanghai&amp;useSSL=false"/>
+    </bean>
+
+
+
+    <!--注册中心配置-->
+    <reg:zookeeper server-lists="localhost:2181" base-sleep-time-milliseconds="" namespace="spring-elasticjob" id="zkCenter"/>
+
+    <!--simple作业配置-->
+    <!--<job:simple id="mySimpleJob" registry-center-ref="zkCenter" cron="0/10 * * * * ?" sharding-total-count="2"-->
+                <!--class="com.example.job.MySimpleJob" overwrite="true"/>-->
+
+    <!--Dataflow作业-->
+    <job:dataflow registry-center-ref="zkCenter" cron="0/10 * * * * ?" sharding-total-count="2" id="myDataflowJob"
+                  class="com.example.job.MyDataflowJob" event-trace-rdb-data-source="dataSource"  overwrite="true" streaming-process="true" >
+        <job:listener class=""/>
+        <job:distributed-listener class="" started-timeout-milliseconds="" completed-timeout-milliseconds=""/>
+
+    </job:dataflow>
+</beans>

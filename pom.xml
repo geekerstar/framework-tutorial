@@ -16,6 +16,7 @@
         <module>framework-tutorial-netty</module>
         <module>framework-tutorial-poi</module>
         <module>framework-tutorial-rabbitmq</module>
+        <module>framework-tutorial-elasticjob-spring</module>
     </modules>
 
 

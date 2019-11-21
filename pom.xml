@@ -13,6 +13,7 @@
         <module>framework-tutorial-easyexcel</module>
         <module>framework-tutorial-elasticjob</module>
         <module>framework-tutorial-flowable</module>
+        <module>framework-tutorial-netty</module>
     </modules>
 
 

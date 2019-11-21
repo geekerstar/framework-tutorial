@@ -11,6 +11,7 @@
     <modules>
         <module>framework-tutorial-activiti</module>
         <module>framework-tutorial-easyexcel</module>
+        <module>framework-tutorial-elasticjob</module>
     </modules>
 
 

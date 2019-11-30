@@ -21,6 +21,7 @@
         <module>framework-tutorial-ssm</module>
         <module>framework-tutorial-springmvc-annotation</module>
         <module>framework-tutorial-springboot</module>
+        <module>framework-tutorial-hutool</module>
     </modules>
 
 

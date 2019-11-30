@@ -1,6 +1,6 @@
 package com.geekerstar.bootstrap;
 
-import com.geekerstar.learnspringboot.annotation.EnableHelloWorld;
+import com.geekerstar.annotation.EnableHelloWorld;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

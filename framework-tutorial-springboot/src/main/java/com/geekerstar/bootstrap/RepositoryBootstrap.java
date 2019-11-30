@@ -1,6 +1,6 @@
 package com.geekerstar.bootstrap;
 
-import com.geekerstar.learnspringboot.repository.MyFirstLevelRepository;
+import com.geekerstar.repository.MyFirstLevelRepository;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,7 +1,7 @@
 package com.geekerstar.configuration;
 
-import com.geekerstar.learnspringboot.annotation.EnableHelloWorld;
-import com.geekerstar.learnspringboot.condition.ConditionalOnSystemProperty;
+import com.geekerstar.annotation.EnableHelloWorld;
+import com.geekerstar.condition.ConditionalOnSystemProperty;
 import org.springframework.context.annotation.Configuration;
 
 /**

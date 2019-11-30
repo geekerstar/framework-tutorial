@@ -1,6 +1,6 @@
 package com.geekerstar.bootstrap;
 
-import com.geekerstar.learnspringboot.condition.ConditionalOnSystemProperty;
+import com.geekerstar.condition.ConditionalOnSystemProperty;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

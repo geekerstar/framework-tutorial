@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<returnsms>
+    <returnstatus>Success（成功）</returnstatus>
+    <message>ok</message>
+    <remainpoint>1490</remainpoint>
+    <taskID>885</taskID>
+    <successCounts>1</successCounts>
+</returnsms>

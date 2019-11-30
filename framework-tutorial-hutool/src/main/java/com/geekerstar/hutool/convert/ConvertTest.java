@@ -3,6 +3,7 @@ package com.geekerstar.hutool.convert;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.lang.TypeReference;
 import cn.hutool.core.util.CharsetUtil;
+import org.junit.Test;
 
 import java.util.Date;
 import java.util.List;
@@ -14,7 +15,9 @@ import java.util.concurrent.TimeUnit;
  * description:
  */
 public class ConvertTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void test() {
         // 转换为字符串
         int a = 1;
         String aStr = Convert.toStr(a);

@@ -22,6 +22,7 @@
         <module>framework-tutorial-springmvc-annotation</module>
         <module>framework-tutorial-springboot</module>
         <module>framework-tutorial-hutool</module>
+        <module>framework-tutorial-shiro</module>
     </modules>
 
 

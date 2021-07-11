@@ -24,6 +24,7 @@
         <module>framework-tutorial-hutool</module>
         <module>framework-tutorial-shiro</module>
         <module>framework-tutorial-redis</module>
+        <module>framework-tutorial-elasticsearch</module>
     </modules>
 
     <dependencies>

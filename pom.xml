@@ -23,6 +23,7 @@
         <module>framework-tutorial-springboot</module>
         <module>framework-tutorial-hutool</module>
         <module>framework-tutorial-shiro</module>
+        <module>framework-tutorial-redis</module>
     </modules>
 
     <dependencies>

@@ -14,9 +14,11 @@ public class Procuder {
 	public static void main(String[] args) throws Exception {
 		//1 创建一个ConnectionFactory, 并进行配置
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		connectionFactory.setHost("192.168.11.76");
+		connectionFactory.setHost("192.168.0.107");
 		connectionFactory.setPort(5672);
-		connectionFactory.setVirtualHost("/");
+		connectionFactory.setVirtualHost("geek");
+		connectionFactory.setUsername("admin");
+		connectionFactory.setPassword("admin");
 
 		//2 通过连接工厂创建连接
 		Connection connection = connectionFactory.newConnection();

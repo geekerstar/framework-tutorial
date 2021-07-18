@@ -11,9 +11,11 @@ public class Producer4DirectExchange {
 
 		//1 创建ConnectionFactory
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		connectionFactory.setHost("192.168.11.76");
+		connectionFactory.setHost("192.168.0.107");
 		connectionFactory.setPort(5672);
-		connectionFactory.setVirtualHost("/");
+		connectionFactory.setVirtualHost("geek");
+		connectionFactory.setUsername("admin");
+		connectionFactory.setPassword("admin");
 
 		//2 创建Connection
 		Connection connection = connectionFactory.newConnection();
@@ -21,7 +23,7 @@ public class Producer4DirectExchange {
 		Channel channel = connection.createChannel();
 		//4 声明
 		String exchangeName = "test_direct_exchange";
-		String routingKey = "test.direct111";
+		String routingKey = "test.direct";
 		//5 发送
 
 		String msg = "Hello World RabbitMQ 4  Direct Exchange Message 111 ... ";

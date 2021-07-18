@@ -15,9 +15,11 @@ public class Producer {
 
 
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		connectionFactory.setHost("192.168.11.76");
+		connectionFactory.setHost("192.168.0.107");
 		connectionFactory.setPort(5672);
-		connectionFactory.setVirtualHost("/");
+		connectionFactory.setVirtualHost("geek");
+		connectionFactory.setUsername("admin");
+		connectionFactory.setPassword("admin");
 
 		Connection connection = connectionFactory.newConnection();
 		Channel channel = connection.createChannel();
@@ -32,7 +34,7 @@ public class Producer {
 		channel.addReturnListener(new ReturnListener() {
 			@Override
 			public void handleReturn(int replyCode, String replyText, String exchange,
-					String routingKey, BasicProperties properties, byte[] body) throws IOException {
+					String routingKey, BasicProperties properties, byte[] body) {
 
 				System.err.println("---------handle  return----------");
 				System.err.println("replyCode: " + replyCode);

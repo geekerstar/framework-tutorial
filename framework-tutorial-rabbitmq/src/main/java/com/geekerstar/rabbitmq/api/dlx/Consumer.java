@@ -14,9 +14,11 @@ public class Consumer {
 
 
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		connectionFactory.setHost("192.168.11.76");
+		connectionFactory.setHost("192.168.0.107");
 		connectionFactory.setPort(5672);
-		connectionFactory.setVirtualHost("/");
+		connectionFactory.setVirtualHost("geek");
+		connectionFactory.setUsername("admin");
+		connectionFactory.setPassword("admin");
 
 		Connection connection = connectionFactory.newConnection();
 		Channel channel = connection.createChannel();
@@ -28,7 +30,7 @@ public class Consumer {
 
 		channel.exchangeDeclare(exchangeName, "topic", true, false, null);
 
-		Map<String, Object> agruments = new HashMap<String, Object>();
+		Map<String, Object> agruments = new HashMap<>();
 		agruments.put("x-dead-letter-exchange", "dlx.exchange");
 		//这个agruments属性，要设置到声明队列上
 		channel.queueDeclare(queueName, true, false, false, agruments);

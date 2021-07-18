@@ -12,9 +12,11 @@ public class Consumer4FanoutExchange {
 
         ConnectionFactory connectionFactory = new ConnectionFactory() ;
 
-        connectionFactory.setHost("192.168.11.76");
+        connectionFactory.setHost("192.168.0.107");
         connectionFactory.setPort(5672);
-		connectionFactory.setVirtualHost("/");
+        connectionFactory.setVirtualHost("geek");
+        connectionFactory.setUsername("admin");
+        connectionFactory.setPassword("admin");
 
         connectionFactory.setAutomaticRecoveryEnabled(true);
         connectionFactory.setNetworkRecoveryInterval(3000);

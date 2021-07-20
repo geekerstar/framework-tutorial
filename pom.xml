@@ -25,6 +25,7 @@
         <module>framework-tutorial-shiro</module>
         <module>framework-tutorial-redis</module>
         <module>framework-tutorial-elasticsearch</module>
+        <module>framework-tutorial-rocketmq</module>
     </modules>
 
     <dependencies>

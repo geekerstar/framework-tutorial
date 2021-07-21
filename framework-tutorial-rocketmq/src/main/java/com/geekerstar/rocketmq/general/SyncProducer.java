@@ -10,7 +10,7 @@ public class SyncProducer {
         // 创建一个producer，参数为Producer Group名称
         DefaultMQProducer producer = new DefaultMQProducer("pg");
         // 指定nameServer地址
-        producer.setNamesrvAddr("rocketmqOS:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
         // 设置当发送失败时重试发送的次数，默认为2次
         producer.setRetryTimesWhenSendFailed(3);
         // 设置发送超时时限为5s，默认3s

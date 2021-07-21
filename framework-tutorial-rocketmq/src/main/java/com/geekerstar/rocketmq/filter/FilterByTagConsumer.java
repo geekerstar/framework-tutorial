@@ -13,7 +13,7 @@ public class FilterByTagConsumer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("pg");
-        consumer.setNamesrvAddr("rocketmqOS:9876");
+        consumer.setNamesrvAddr("127.0.0.1:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
 
         // 仅订阅Tag为myTagA与myTagB的消息，不包含myTagC

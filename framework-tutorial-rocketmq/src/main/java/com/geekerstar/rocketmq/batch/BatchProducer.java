@@ -9,7 +9,7 @@ import java.util.List;
 public class BatchProducer {
     public static void main(String[] args) throws Exception {
         DefaultMQProducer producer = new DefaultMQProducer("pg");
-        producer.setNamesrvAddr("rocketmqOS:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
         // 指定要发送的消息的最大大小，默认是4M
         // 不过，仅修改该属性是不行的，还需要同时修改broker加载的配置文件中的
         // maxMessageSize属性

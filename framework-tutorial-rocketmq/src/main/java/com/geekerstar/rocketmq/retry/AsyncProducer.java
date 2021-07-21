@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class AsyncProducer {
     public static void main(String[] args) throws Exception {
         DefaultMQProducer producer = new DefaultMQProducer("pg");
-        producer.setNamesrvAddr("rocketmqOS:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
         // 指定异步发送失败后不进行重试发送
         producer.setRetryTimesWhenSendAsyncFailed(0);
         // 指定新创建的Topic的Queue数量为2，默认为4

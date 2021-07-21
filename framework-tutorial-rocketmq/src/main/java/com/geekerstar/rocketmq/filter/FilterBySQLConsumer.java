@@ -14,7 +14,7 @@ public class FilterBySQLConsumer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("pg");
-        consumer.setNamesrvAddr("rocketmqOS:9876");
+        consumer.setNamesrvAddr("127.0.0.1:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
 
         // 要从TopicE的消息中过滤出age在[0, 6]间的消息

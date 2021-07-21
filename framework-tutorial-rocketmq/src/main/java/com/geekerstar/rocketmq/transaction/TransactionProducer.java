@@ -9,7 +9,7 @@ import java.util.concurrent.*;
 public class TransactionProducer {
     public static void main(String[] args) throws Exception {
         TransactionMQProducer producer = new TransactionMQProducer("tpg");
-        producer.setNamesrvAddr("rocketmqOS:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
 
         /**
          *  定义一个线程池

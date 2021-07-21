@@ -14,7 +14,7 @@ public class RetryConsumer {
 
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("cg");
-        consumer.setNamesrvAddr("mqOS:9876");
+        consumer.setNamesrvAddr("127.0.0.1:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         consumer.subscribe("someTopic", "*");
         consumer.registerMessageListener(new MessageListenerConcurrently() {

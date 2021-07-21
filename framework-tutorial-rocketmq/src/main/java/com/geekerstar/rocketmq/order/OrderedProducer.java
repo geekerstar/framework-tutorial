@@ -11,7 +11,7 @@ import java.util.List;
 public class OrderedProducer {
     public static void main(String[] args) throws Exception {
         DefaultMQProducer producer = new DefaultMQProducer("pg");
-        producer.setNamesrvAddr("rocketmqOS:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
 
         // 若为全局有序，则需要设置Queue数量为1
         // producer.setDefaultTopicQueueNums(1);
@@ -34,7 +34,7 @@ public class OrderedProducer {
                 public MessageQueue select(List<MessageQueue> mqs, Message msg, Object arg) {
                     // 以下是使用消息key作为选择的选择算法
                     String keys = msg.getKeys();
-                    Integer id = Integer.valueOf(keys);
+                    int id = Integer.parseInt(keys);
 
                     // 以下是使用arg作为选择key的选择算法
                     // Integer id = (Integer) arg;

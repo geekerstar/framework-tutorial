@@ -18,7 +18,7 @@ public class SomeConsumer {
         // 定义一个push消费者
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("cg");
         // 指定nameServer
-        consumer.setNamesrvAddr("rocketmqOS:9876");
+        consumer.setNamesrvAddr("127.0.0.1:9876");
         // 指定从第一条消息开始消费
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         // 指定消费topic与tag

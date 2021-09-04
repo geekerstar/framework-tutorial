@@ -26,6 +26,7 @@
         <module>framework-tutorial-redis</module>
         <module>framework-tutorial-elasticsearch</module>
         <module>framework-tutorial-rocketmq</module>
+        <module>framework-tutorial-flink</module>
     </modules>
 
     <dependencies>

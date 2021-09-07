@@ -1,0 +1,13 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: utf-8
+
+es:
+  host: 127.0.0.1
+  port: 9200
+  userName:
+  password:
+

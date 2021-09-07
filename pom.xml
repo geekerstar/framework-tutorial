@@ -27,6 +27,7 @@
         <module>framework-tutorial-elasticsearch</module>
         <module>framework-tutorial-rocketmq</module>
         <module>framework-tutorial-flink</module>
+        <module>framework-tutorial-loki</module>
     </modules>
 
     <dependencies>

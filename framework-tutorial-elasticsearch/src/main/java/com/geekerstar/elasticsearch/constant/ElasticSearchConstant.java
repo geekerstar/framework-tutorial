@@ -10,4 +10,8 @@ public class ElasticSearchConstant {
     public static final String INDEX_DRUGS = "drugs";
 
     public static final String INDEX_PHARMACY_DRUGS = "pharmacy_drugs";
+
+    public static final String INDEX_USER = "user";
+
+    public static final String INDEX_TYPE = "_doc";
 }
